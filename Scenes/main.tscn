@@ -1,8 +1,10 @@
-[gd_scene load_steps=7 format=3 uid="uid://dx4bac3puhnbr"]
+[gd_scene load_steps=10 format=3 uid="uid://dx4bac3puhnbr"]
 
 [ext_resource type="Texture2D" uid="uid://5r2qrjuiw262" path="res://Assets/main-tile-map.png" id="1_27hbs"]
 [ext_resource type="Script" path="res://Scripts/main.gd" id="1_oc0yh"]
 [ext_resource type="PackedScene" uid="uid://cx043vncam2ep" path="res://Scenes/hud.tscn" id="2_ltbuo"]
+[ext_resource type="PackedScene" uid="uid://cp6h2nx1jol1j" path="res://Scenes/player.tscn" id="4_atysr"]
+[ext_resource type="PackedScene" uid="uid://0df8qnr45i2a" path="res://Scenes/madness_zone.tscn" id="6_bknwk"]
 
 [sub_resource type="PhysicsMaterial" id="PhysicsMaterial_yoln8"]
 
@@ -55,12 +57,89 @@ texture_region_size = Vector2i(64, 64)
 0:1/0/physics_layer_0/linear_velocity = Vector2(0, 0)
 0:1/0/physics_layer_0/angular_velocity = 0.0
 0:1/0/physics_layer_0/polygon_0/points = PackedVector2Array(32, -32, -32, -32, -32, 32, 32, 32)
+4:3/0 = 0
+4:3/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+4:3/0/physics_layer_0/angular_velocity = 0.0
+4:3/0/physics_layer_0/polygon_0/points = PackedVector2Array(-32, -32, 32, -32, 32, -13.5, -32, -12.5)
+7:0/0 = 0
+7:0/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+7:0/0/physics_layer_0/angular_velocity = 0.0
+7:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-32, -32, 32, -32, 32, 32, -32, 32)
+7:1/0 = 0
+7:1/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+7:1/0/physics_layer_0/angular_velocity = 0.0
+7:1/0/physics_layer_0/polygon_0/points = PackedVector2Array(-32, -32, 32, -32, 32, 32, -32, 32)
+8:1/0 = 0
+8:1/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+8:1/0/physics_layer_0/angular_velocity = 0.0
+8:1/0/physics_layer_0/polygon_0/points = PackedVector2Array(-32, -32, 32, -32, 32, 32, -32, 32)
+8:2/0 = 0
+8:2/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+8:2/0/physics_layer_0/angular_velocity = 0.0
+8:2/0/physics_layer_0/polygon_0/points = PackedVector2Array(-32, -32, 32, -32, 32, 32, -32, 32)
+9:2/0 = 0
+9:2/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+9:2/0/physics_layer_0/angular_velocity = 0.0
+9:2/0/physics_layer_0/polygon_0/points = PackedVector2Array(-32, -32, 32, -32, 32, 32, -32, 32)
+9:1/0 = 0
+9:1/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+9:1/0/physics_layer_0/angular_velocity = 0.0
+9:1/0/physics_layer_0/polygon_0/points = PackedVector2Array(-32, -32, 32, -32, 32, 32, -32, 32)
+9:0/0 = 0
+9:0/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+9:0/0/physics_layer_0/angular_velocity = 0.0
+9:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-32, -32, 32, -32, 32, 32, -32, 32)
+8:0/0 = 0
+8:0/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+8:0/0/physics_layer_0/angular_velocity = 0.0
+8:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-32, -32, 32, -32, 32, 32, -32, 32)
+7:2/0 = 0
+7:2/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+7:2/0/physics_layer_0/angular_velocity = 0.0
+7:2/0/physics_layer_0/polygon_0/points = PackedVector2Array(-32, -32, 32, -32, 32, 32, -32, 32)
+5:4/0 = 0
+5:4/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+5:4/0/physics_layer_0/angular_velocity = 0.0
+5:4/0/physics_layer_0/polygon_0/points = PackedVector2Array(-32, -32, 32, -32, 32, 32, -32, 32)
+6:4/0 = 0
+6:4/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+6:4/0/physics_layer_0/angular_velocity = 0.0
+6:4/0/physics_layer_0/polygon_0/points = PackedVector2Array(-32, -32, 32, -32, 32, 32, -32, 32)
+7:4/0 = 0
+7:4/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+7:4/0/physics_layer_0/angular_velocity = 0.0
+7:4/0/physics_layer_0/polygon_0/points = PackedVector2Array(-32, -32, 32, -32, 32, 32, -32, 32)
+8:4/0 = 0
+8:4/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+8:4/0/physics_layer_0/angular_velocity = 0.0
+8:4/0/physics_layer_0/polygon_0/points = PackedVector2Array(-32, -32, 32, -32, 32, 32, -32, 32)
+9:4/0 = 0
+9:4/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+9:4/0/physics_layer_0/angular_velocity = 0.0
+9:4/0/physics_layer_0/polygon_0/points = PackedVector2Array(-32, -32, 32, -32, 32, 32, -32, 32)
+5:5/0 = 0
+5:5/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+5:5/0/physics_layer_0/angular_velocity = 0.0
+5:5/0/physics_layer_0/polygon_0/points = PackedVector2Array(-32, -32, 32, -32, 32, 32, -32, 32)
+9:5/0 = 0
+9:5/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+9:5/0/physics_layer_0/angular_velocity = 0.0
+9:5/0/physics_layer_0/polygon_0/points = PackedVector2Array(-32, -32, 32, -32, 32, 32, -32, 32)
+6:3/0 = 0
+6:3/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+6:3/0/physics_layer_0/angular_velocity = 0.0
+5:3/0 = 0
+5:3/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+5:3/0/physics_layer_0/angular_velocity = 0.0
 
 [sub_resource type="TileSet" id="TileSet_suax1"]
 tile_size = Vector2i(64, 64)
 physics_layer_0/collision_layer = 1
 physics_layer_0/physics_material = SubResource("PhysicsMaterial_yoln8")
 sources/0 = SubResource("TileSetAtlasSource_l44fk")
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_mrb7x"]
+size = Vector2(699, 123)
 
 [node name="Main" type="Node2D"]
 script = ExtResource("1_oc0yh")
@@ -71,12 +150,26 @@ format = 2
 layer_0/name = "Background"
 layer_0/tile_data = PackedInt32Array(393217, 0, 3, 393216, 0, 3, 393219, 0, 3, 393220, 0, 3, 393221, 0, 3, 393222, 0, 3, 393223, 0, 3, 393224, 0, 3, 393225, 0, 3, 393226, 0, 3, 458762, 0, 3, 458761, 0, 3, 458760, 0, 3, 458759, 0, 3, 458758, 0, 3, 458757, 0, 3, 458756, 0, 3, 458755, 0, 3, 458754, 0, 3, 458753, 0, 3, 458752, 0, 3, 393218, 0, 4)
 layer_1/name = "Foreground"
-layer_1/tile_data = PackedInt32Array(327680, 131072, 1, 327681, 196608, 1, 327683, 65536, 1, 327684, 131072, 1, 327685, 131072, 1, 327686, 131072, 1, 327687, 131072, 1, 327688, 131072, 1, 327689, 131072, 1, 327690, 131072, 1, 393219, 65536, 2, 393220, 65536, 2, 393221, 65536, 2, 393222, 65536, 2, 393223, 65536, 2, 393224, 65536, 2, 393225, 65536, 2, 393226, 65536, 2, 393217, 65536, 2, 393216, 65536, 2, 524288, 131072, 3, 524289, 131072, 3, 524290, 131072, 3, 524291, 131072, 3, 524292, 131072, 3, 524293, 131072, 3, 524294, 131072, 3, 524295, 131072, 3, 524296, 131072, 3, 524297, 131072, 3, 524298, 131072, 3, 458751, 0, 1, 524287, 0, 1, 589823, 131072, 3, 393227, 0, 1, 458763, 0, 1, 524299, 131072, 3, 393215, 65536, 1, 327691, 196608, 1)
+layer_1/tile_data = PackedInt32Array(327680, 131072, 1, 327681, 196608, 1, 327684, 65536, 1, 327685, 131072, 1, 327686, 131072, 1, 327687, 131072, 1, 327688, 131072, 1, 327689, 131072, 1, 327690, 131072, 1, 393220, 65536, 2, 393221, 65536, 2, 393222, 65536, 2, 393223, 65536, 2, 393224, 65536, 2, 393225, 65536, 2, 393226, 65536, 2, 393217, 65536, 2, 393216, 65536, 2, 524288, 131072, 3, 524289, 131072, 3, 524290, 131072, 3, 524291, 131072, 3, 524292, 131072, 3, 524293, 131072, 3, 524294, 131072, 3, 524295, 131072, 3, 524296, 131072, 3, 524297, 131072, 3, 524298, 131072, 3, 458751, 0, 1, 524287, 0, 1, 589823, 131072, 3, 393227, 0, 1, 458763, 0, 1, 524299, 131072, 3, 393215, 65536, 1, 393219, 262144, 3, 327691, 458752, 1, 262156, 524288, 1, 196621, 524288, 1, 131086, 524288, 1, 196622, 524288, 1, 327694, 524288, 1, 327693, 524288, 1, 327692, 524288, 1, 262157, 524288, 1, 262158, 524288, 1, 262155, 327680, 4, 196620, 327680, 4, 65549, 327680, 4, 131085, 327680, 5, 65550, 458752, 4, 65551, 589824, 4, 131087, 589824, 5, 196623, 589824, 5, 262159, 589824, 5, 327695, 589824, 5)
 layer_2/name = "Doodads"
-layer_2/tile_data = PackedInt32Array()
+layer_2/tile_data = PackedInt32Array(262156, 393216, 3, 196621, 393216, 3, 327691, 393216, 3)
 
 [node name="HUD" parent="." instance=ExtResource("2_ltbuo")]
+
+[node name="Player" parent="." instance=ExtResource("4_atysr")]
+position = Vector2(46, 279)
+collision_layer = 17
 
 [node name="DarknessTimer" type="Timer" parent="."]
 wait_time = 300.0
 autostart = true
+
+[node name="MadnessZones" parent="." instance=ExtResource("6_bknwk")]
+collision_layer = 17
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="MadnessZones"]
+position = Vector2(350.5, 446.5)
+shape = SubResource("RectangleShape2D_mrb7x")
+
+[connection signal="body_entered" from="MadnessZones" to="MadnessZones" method="_on_body_entered"]
+[connection signal="body_exited" from="MadnessZones" to="MadnessZones" method="_on_body_exited"]

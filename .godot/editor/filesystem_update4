@@ -1,4 +1,12 @@
-res://main2.tscn
-res://Scripts/Player.gd
-res://main-VC.tscn
 res://Scenes/main-VC.tscn
+res://Scenes/main.tscn
+res://Scenes/hud.tscn
+res://Scripts/main.gd
+res://Scenes/short_sword.tscn
+res://Scenes/madness_zone.tscn
+res://Scenes/player.tscn
+res://Scripts/madness_component.gd
+res://Scripts/Player.gd
+res://Scenes/madness_zone.gd
+res://Scripts/hud.gd
+res://Scripts/Globals.gd

@@ -1,5 +1,10 @@
 extends CharacterBody2D
 
+class_name Player
+
+@onready var madness_component = %MadnessComponent
+@onready var madness_zones = $"../MadnessZones"
+
 enum PlayerMoveStates {IDLE = 1, WALKING, DASHING, AIR}
 enum PlayerFaceStates {RIGHT = 1, LEFT = -1}
 var currentMoveState
@@ -19,7 +24,6 @@ func _ready():
 
 func _physics_process(delta):
 	
-	print(currentMoveState)
 	match currentMoveState:
 		PlayerMoveStates.IDLE:
 			if !is_on_floor():
@@ -98,10 +102,14 @@ func checkLateralMove():
 
 
 func checkDash():
-	if Input.is_action_just_pressed("dash") and canDash:
+	if Input.is_action_just_pressed("dash") and currentMoveState != PlayerMoveStates.AIR:
 		canDash = false
 		get_tree().create_timer(0.15).timeout.connect(finishDash)
 		currentMoveState = PlayerMoveStates.DASHING
 
 func finishDash():
 	currentMoveState = PlayerMoveStates.IDLE
+	get_tree().create_timer(3).timeout.connect(dashCooldown)
+	
+func dashCooldown():
+	canDash = true

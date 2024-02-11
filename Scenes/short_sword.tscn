@@ -1,0 +1,50 @@
+[gd_scene load_steps=5 format=3 uid="uid://cq3ooy884ayvs"]
+
+[ext_resource type="Texture2D" uid="uid://koj3n4p7dgbq" path="res://Assets/weapon-tileset.png" id="1_ly7l6"]
+
+[sub_resource type="Animation" id="Animation_hgpx7"]
+resource_name = "swing"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.1, 0.2, 0.3, 0.4, 0.5),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1),
+"update": 0,
+"values": [Vector2(0, 0), Vector2(0, 0), Vector2(0, 0), Vector2(0, 0), Vector2(0, 0), Vector2(0, 0)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".:rotation")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.1, 0.2, 0.3, 0.4, 0.5),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1),
+"update": 0,
+"values": [-2.60403, 0.0, 0.0, 0.0, 0.0, 0.0]
+}
+
+[sub_resource type="Animation" id="Animation_jwful"]
+resource_name = "idle"
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_aw22u"]
+_data = {
+"idle": SubResource("Animation_jwful"),
+"swing": SubResource("Animation_hgpx7")
+}
+
+[node name="ShortSword" type="Sprite2D"]
+texture_filter = 1
+texture = ExtResource("1_ly7l6")
+region_enabled = true
+region_rect = Rect2(0, 0, 64, 64)
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+"": SubResource("AnimationLibrary_aw22u")
+}

@@ -1,0 +1,10 @@
+[gd_scene load_steps=2 format=3 uid="uid://0df8qnr45i2a"]
+
+[ext_resource type="Script" path="res://Scenes/madness_zone.gd" id="1_clj1u"]
+
+[node name="MadnessZone" type="Area2D"]
+script = ExtResource("1_clj1u")
+
+[node name="BuildupTimer" type="Timer" parent="."]
+
+[connection signal="timeout" from="BuildupTimer" to="." method="_on_buildup_timer_timeout"]
