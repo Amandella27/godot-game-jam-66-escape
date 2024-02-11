@@ -1,0 +1,87 @@
+[gd_scene load_steps=7 format=3 uid="uid://cx043vncam2ep"]
+
+[ext_resource type="FontFile" uid="uid://bmptdd8cjqyhk" path="res://Assets/Fonts/MercutioNbpSmallcaps-v2aA.ttf" id="1_6b0i2"]
+[ext_resource type="Script" path="res://Scripts/hud.gd" id="1_71bce"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_23fhn"]
+bg_color = Color(0, 0, 0, 0)
+border_width_left = 1
+border_width_top = 1
+border_width_right = 1
+border_width_bottom = 1
+border_color = Color(0.541176, 0.541176, 0.541176, 1)
+corner_detail = 1
+shadow_size = 1
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_rwldr"]
+bg_color = Color(0.572549, 0.00392157, 0, 1)
+border_width_left = 1
+border_width_top = 1
+border_width_bottom = 1
+border_color = Color(0.541176, 0.541176, 0.541176, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ml4ex"]
+bg_color = Color(0, 0, 0, 0)
+border_width_left = 1
+border_width_top = 1
+border_width_right = 1
+border_width_bottom = 1
+border_color = Color(0.541176, 0.541176, 0.541176, 1)
+corner_detail = 1
+shadow_size = 1
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_henav"]
+bg_color = Color(0.239216, 0, 0.623529, 1)
+border_width_left = 1
+border_width_top = 1
+border_width_bottom = 1
+border_color = Color(0.541176, 0.541176, 0.541176, 1)
+
+[node name="HUD" type="CanvasLayer"]
+script = ExtResource("1_71bce")
+
+[node name="MarginContainer" type="MarginContainer" parent="."]
+offset_right = 100.0
+offset_bottom = 24.0
+theme_override_constants/margin_left = 5
+theme_override_constants/margin_top = 5
+theme_override_constants/margin_right = 5
+theme_override_constants/margin_bottom = 5
+
+[node name="HBoxContainer" type="HBoxContainer" parent="MarginContainer"]
+custom_minimum_size = Vector2(100, 0)
+layout_mode = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 0
+theme_override_constants/separation = 2
+
+[node name="HealthBar" type="ProgressBar" parent="MarginContainer/HBoxContainer/VBoxContainer"]
+custom_minimum_size = Vector2(0, 9)
+layout_mode = 2
+size_flags_vertical = 2
+theme_override_styles/background = SubResource("StyleBoxFlat_23fhn")
+theme_override_styles/fill = SubResource("StyleBoxFlat_rwldr")
+value = 50.0
+show_percentage = false
+
+[node name="MadnessBar" type="ProgressBar" parent="MarginContainer/HBoxContainer/VBoxContainer"]
+custom_minimum_size = Vector2(0, 9)
+layout_mode = 2
+size_flags_vertical = 2
+theme_override_styles/background = SubResource("StyleBoxFlat_ml4ex")
+theme_override_styles/fill = SubResource("StyleBoxFlat_henav")
+value = 50.0
+show_percentage = false
+
+[node name="DarknessTimerDisplay" type="Label" parent="."]
+texture_filter = 1
+offset_left = 603.0
+offset_top = 6.0
+offset_right = 635.0
+offset_bottom = 29.0
+theme_override_fonts/font = ExtResource("1_6b0i2")
+theme_override_font_sizes/font_size = 22
+text = "Test"

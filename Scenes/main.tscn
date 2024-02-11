@@ -1,0 +1,82 @@
+[gd_scene load_steps=7 format=3 uid="uid://dx4bac3puhnbr"]
+
+[ext_resource type="Texture2D" uid="uid://5r2qrjuiw262" path="res://Assets/main-tile-map.png" id="1_27hbs"]
+[ext_resource type="Script" path="res://Scripts/main.gd" id="1_oc0yh"]
+[ext_resource type="PackedScene" uid="uid://cx043vncam2ep" path="res://Scenes/hud.tscn" id="2_ltbuo"]
+
+[sub_resource type="PhysicsMaterial" id="PhysicsMaterial_yoln8"]
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_l44fk"]
+texture = ExtResource("1_27hbs")
+texture_region_size = Vector2i(64, 64)
+1:1/0 = 0
+1:1/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+1:1/0/physics_layer_0/angular_velocity = 0.0
+1:1/0/physics_layer_0/polygon_0/points = PackedVector2Array(-32, -32, 32, -32, 32, 32, -32, 32)
+2:1/0 = 0
+2:1/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+2:1/0/physics_layer_0/angular_velocity = 0.0
+2:1/0/physics_layer_0/polygon_0/points = PackedVector2Array(-32, -32, 32, -32, 32, 32, -32, 32)
+3:1/0 = 0
+3:1/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+3:1/0/physics_layer_0/angular_velocity = 0.0
+3:1/0/physics_layer_0/polygon_0/points = PackedVector2Array(-32, -32, 32, -32, 32, 32, -32, 32)
+1:3/0 = 0
+1:3/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+1:3/0/physics_layer_0/angular_velocity = 0.0
+1:3/0/physics_layer_0/polygon_0/points = PackedVector2Array(-32, -32, 32, -32, 32, 32, -32, 32)
+2:3/0 = 0
+2:3/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+2:3/0/physics_layer_0/angular_velocity = 0.0
+2:3/0/physics_layer_0/polygon_0/points = PackedVector2Array(-32, -32, 32, -32, 32, 32, -32, 32)
+3:3/0 = 0
+3:3/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+3:3/0/physics_layer_0/angular_velocity = 0.0
+3:3/0/physics_layer_0/polygon_0/points = PackedVector2Array(-32, -32, 32, -32, 32, 32, -32, 32)
+1:2/0 = 0
+1:2/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+1:2/0/physics_layer_0/angular_velocity = 0.0
+1:2/0/physics_layer_0/polygon_0/points = PackedVector2Array(-32, -32, 32, -32, 32, 0, -32, 0)
+0:3/0 = 0
+0:3/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+0:3/0/physics_layer_0/angular_velocity = 0.0
+0:2/0 = 0
+0:2/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+0:2/0/physics_layer_0/angular_velocity = 0.0
+0:2/0/physics_layer_0/polygon_0/points = PackedVector2Array(32, -32, -32, -32, -32, 32, 32, 32)
+0:4/0 = 0
+0:4/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+0:4/0/physics_layer_0/angular_velocity = 0.0
+0:0/0 = 0
+0:0/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+0:0/0/physics_layer_0/angular_velocity = 0.0
+0:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(32, -32, -32, -32, -32, 32, 32, 32)
+0:1/0 = 0
+0:1/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+0:1/0/physics_layer_0/angular_velocity = 0.0
+0:1/0/physics_layer_0/polygon_0/points = PackedVector2Array(32, -32, -32, -32, -32, 32, 32, 32)
+
+[sub_resource type="TileSet" id="TileSet_suax1"]
+tile_size = Vector2i(64, 64)
+physics_layer_0/collision_layer = 1
+physics_layer_0/physics_material = SubResource("PhysicsMaterial_yoln8")
+sources/0 = SubResource("TileSetAtlasSource_l44fk")
+
+[node name="Main" type="Node2D"]
+script = ExtResource("1_oc0yh")
+
+[node name="TileMap" type="TileMap" parent="."]
+tile_set = SubResource("TileSet_suax1")
+format = 2
+layer_0/name = "Background"
+layer_0/tile_data = PackedInt32Array(393217, 0, 3, 393216, 0, 3, 393219, 0, 3, 393220, 0, 3, 393221, 0, 3, 393222, 0, 3, 393223, 0, 3, 393224, 0, 3, 393225, 0, 3, 393226, 0, 3, 458762, 0, 3, 458761, 0, 3, 458760, 0, 3, 458759, 0, 3, 458758, 0, 3, 458757, 0, 3, 458756, 0, 3, 458755, 0, 3, 458754, 0, 3, 458753, 0, 3, 458752, 0, 3, 393218, 0, 4)
+layer_1/name = "Foreground"
+layer_1/tile_data = PackedInt32Array(327680, 131072, 1, 327681, 196608, 1, 327683, 65536, 1, 327684, 131072, 1, 327685, 131072, 1, 327686, 131072, 1, 327687, 131072, 1, 327688, 131072, 1, 327689, 131072, 1, 327690, 131072, 1, 393219, 65536, 2, 393220, 65536, 2, 393221, 65536, 2, 393222, 65536, 2, 393223, 65536, 2, 393224, 65536, 2, 393225, 65536, 2, 393226, 65536, 2, 393217, 65536, 2, 393216, 65536, 2, 524288, 131072, 3, 524289, 131072, 3, 524290, 131072, 3, 524291, 131072, 3, 524292, 131072, 3, 524293, 131072, 3, 524294, 131072, 3, 524295, 131072, 3, 524296, 131072, 3, 524297, 131072, 3, 524298, 131072, 3, 458751, 0, 1, 524287, 0, 1, 589823, 131072, 3, 393227, 0, 1, 458763, 0, 1, 524299, 131072, 3, 393215, 65536, 1, 327691, 196608, 1)
+layer_2/name = "Doodads"
+layer_2/tile_data = PackedInt32Array()
+
+[node name="HUD" parent="." instance=ExtResource("2_ltbuo")]
+
+[node name="DarknessTimer" type="Timer" parent="."]
+wait_time = 300.0
+autostart = true
